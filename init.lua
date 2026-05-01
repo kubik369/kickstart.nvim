@@ -104,6 +104,7 @@ vim.o.number = true
 --  Experiment for yourself to see if you like it!
 -- vim.o.relativenumber = true
 
+
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.o.mouse = 'a'
 
@@ -945,7 +946,11 @@ require('lazy').setup({
       })
     end,
   },
-
+  {
+    'cschierig/linenumbers.nvim',
+     event = 'BufEnter',
+     config = true,
+  },
   -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
   -- place them in the correct locations.
